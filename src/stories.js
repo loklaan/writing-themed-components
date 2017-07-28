@@ -6,6 +6,11 @@ import ButtonThemed from './3.themed-styles'
 import { ThemeProvider, themed } from './_.util'
 import { flexCenter } from './_.styles'
 
+/*
+|-------------------------------------------------------------------------------
+| See each numbered files for a brief explanation of what is being accomplished.
+*/
+
 storiesOf('Impressive Button', module)
   .addDecorator(child => <div style={flexCenter}>{child()}</div>)
 

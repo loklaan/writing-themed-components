@@ -2,6 +2,11 @@ import React from 'react'
 import { StyleSheet } from './_.util'
 import { defaultStyles } from './_.styles'
 
+/*
+|-------------------------------------------------------------------------------
+| Let's add our styles to a button. Business as usual.
+*/
+
 const Button = ({
   children,
   prefix,

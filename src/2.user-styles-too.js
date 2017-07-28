@@ -2,6 +2,14 @@ import React from 'react'
 import { combineAsStyleSheets } from './_.util'
 import { defaultStyles } from './_.styles'
 
+/*
+|-------------------------------------------------------------------------------
+| Along with adding styles to a button, let's make them overridable with user
+| styles.
+|
+| This becomes the underlying system we'll use for "Theming".
+*/
+
 const Button = ({
   children,
   prefix,
