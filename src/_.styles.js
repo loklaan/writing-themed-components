@@ -11,11 +11,11 @@ export const defaultStyles = {
     transition: 'transform 250ms, box-shadow 250ms',
     '&:hover': {
       transform: 'translate(-2px, -2px)',
-      boxShadow: '3px 3px 0px black',
+      boxShadow: '3px 3px 0px black'
     }
   },
   prefix: {
-    marginRight: '8px',
+    marginRight: '8px'
   },
   content: {
     display: 'flex',
@@ -28,8 +28,8 @@ export const defaultStyles = {
     lineHeight: '12px'
   },
   suffix: {
-    marginLeft: '8px',
-  },
+    marginLeft: '8px'
+  }
 }
 
 export const flexCenter = {
@@ -37,4 +37,4 @@ export const flexCenter = {
   justifyContent: 'center',
   alignItems: 'center',
   height: '90vh'
-};
+}

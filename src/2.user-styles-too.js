@@ -10,12 +10,7 @@ import { defaultStyles } from './_.styles'
 | This becomes the underlying system we'll use for "Theming".
 */
 
-const Button = ({
-  children,
-  prefix,
-  suffix,
-  userStyles,
-}) => {
+const Button = ({ children, prefix, suffix, userStyles }) => {
   const styles = combineAsStyleSheets(defaultStyles, userStyles)
   return (
     <div className={styles.container}>

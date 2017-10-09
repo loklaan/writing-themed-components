@@ -6,12 +6,15 @@
   "author": "Lochlan Bunn <bunn@lochan.io>",
   "license": "MIT",
   "scripts": {
-    "start": "storybook-server --port=\"${PORT:-3000}\""
+    "start": "storybook-server --port=\"${PORT:-3000}\"",
+    "format": "prettier-standard {src,.storybook}/*.js --write"
   },
   "dependencies": {
+    "@storybook/addon-options": "^3.2.12",
     "@storybook/react": "^3.1.9",
     "glamor": "^2.20.37",
     "lodash": "^4.17.4",
+    "prettier-standard": "^7.0.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
