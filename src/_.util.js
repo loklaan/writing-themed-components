@@ -1,11 +1,11 @@
-import { mapValues as mapObject, defaultsDeep as assignDefaults } from 'lodash'
-import { withContext, getContext, mapProps, compose } from 'recompose'
+import React from 'react'
 import Types from 'prop-types'
 import { css } from 'glamor'
-import React from 'react'
+import { mapValues as mapObject, defaultsDeep as assignDefaults } from 'lodash'
+import { withContext, getContext, mapProps, compose } from 'recompose'
 
 const THEME_CONTEXT_TYPES = { ctxTheme: Types.object }
-const PassThrough = ({children}) => children
+const PassThrough = ({ children }) => children
 
 /*
 |-------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ const PassThrough = ({children}) => children
 */
 
 function StyleSheet (stylesMap) {
-  return mapObject(stylesMap, (styles) => css(styles).toString())
+  return mapObject(stylesMap, styles => css(styles).toString())
 }
 
 /*
@@ -45,13 +45,10 @@ const themed = compose(
 const combineAsStyleSheets = (a, b) => {
   const aSheet = StyleSheet(a)
   const bSheet = StyleSheet(b)
-  return mapObject(
-    aSheet,
-    (x, id) => {
-      const y = bSheet[id]
-      return y ? `${x} ${y}` : x
-    }
-  )
+  return mapObject(aSheet, (x, id) => {
+    const y = bSheet[id]
+    return y ? `${x} ${y}` : x
+  })
 }
 
 export {
